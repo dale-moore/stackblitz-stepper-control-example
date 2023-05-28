@@ -1,0 +1,23 @@
+<h2>Enter Question</h2>
+
+<form [formGroup]="formGroup">
+     <div class="center">
+
+          <mat-form-field appearance="outline" >
+               <mat-label>Question</mat-label>
+               <input matInput #questionControlElement="matInput" formControlName="questionFormCtrl">
+          </mat-form-field>
+
+          <div class="instructions">
+               Enter a question and press Next.
+          </div>
+
+          <div class="button-group">
+               <!-- to force a single button to the right side add a space before the button. -->
+               &nbsp;
+               <button mat-raised-button color="primary" type="button" (click)="stepDone()">Next</button>
+          </div>
+
+     </div>
+
+</form>

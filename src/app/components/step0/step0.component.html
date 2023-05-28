@@ -1,0 +1,49 @@
+<h2>Introduction</h2>
+
+<form>
+     <div>
+
+          <p>
+               This example demonstrates how to use the Material UI Stepper control in an Angular application.
+          </p>
+
+          <p>
+               The stepper control is configured as a 'linear' control with all of the steps set to
+               non-editable which means the user cannot select a step from the stepper.  This was done so that
+               the navigation between the steps is completely driven by the code.
+          </p>
+
+          <p>
+               This example also shows one way of setting the focus to a control on a form by using the
+               animationDone event emitted by the Material UI Stepper control.  When the animationDone event
+               is received, the code calls the method "onComponentDisplayed()" on the associated
+               component.  This allows the form component to control where the focus is set.
+          </p>
+
+          <p>
+               The steps guide a user through the process of creating questions and answers for a quiz.  Once the
+               user completes entry of a question they are prompted if they want to enter another.  If the user
+               selects 'yes' then the "Enter Question" step is shown again.
+          </p>
+
+          <p>
+               To share data between the form steps, a Service is used with an observable BehaviorSubject object.  This
+               design allows each form to save the collected data as well as have access to other data that has been
+               saved by the other forms.
+          </p>
+
+          <br>
+          <br>
+
+          <div>
+               <p style="text-align:left;">
+                    &nbsp;
+                    <span style="float:right;">
+                         <button mat-raised-button color="primary" type="button" (click)="stepDone()">Next</button>
+                         &nbsp;&nbsp;&nbsp;
+                    </span>
+               </p>
+          </div>
+     </div>
+
+</form>

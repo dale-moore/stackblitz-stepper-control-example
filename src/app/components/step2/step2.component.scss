@@ -1,0 +1,19 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.instructions {
+  color: blue;
+  font-size: 1.5em;
+  text-align: center;
+}

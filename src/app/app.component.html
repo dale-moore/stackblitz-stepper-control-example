@@ -1,0 +1,30 @@
+<h1>Stepper Example</h1>
+
+<mat-stepper #stepper linear (animationDone)="onAnimationDone()" animationDuration="1000">
+
+  <mat-step editable="false" #step0>
+    <ng-template matStepLabel>
+      Introduction
+    </ng-template>
+    <app-step0 #step0Component [stepperControlReference]="stepper" (stepCompleteEvent)="stepCompletedEvent($event)"></app-step0>
+  </mat-step>
+
+  <mat-step editable="false" #step1>
+    <ng-template matStepLabel>Enter Question</ng-template>
+    <app-step1 #step1Component [stepperControlReference]="stepper" (stepCompleteEvent)="stepCompletedEvent($event)"></app-step1>
+  </mat-step>
+
+  <mat-step editable="false" #step2>
+    <ng-template matStepLabel>Enter Answer</ng-template>
+    <app-step2 #step2Component [stepperControlReference]="stepper" (stepCompleteEvent)="stepCompletedEvent($event)"></app-step2>
+  </mat-step>
+
+  <mat-step editable="false" #step3>
+    <ng-template matStepLabel>Done</ng-template>
+    <app-step3 #step3Component [stepperControlReference]="stepper" (resetStepEvent)="resetStepEvent($event)" (stepCompleteEvent)="stepCompletedEvent($event)"></app-step3>
+  </mat-step>
+
+</mat-stepper>
+
+
+<router-outlet></router-outlet>
